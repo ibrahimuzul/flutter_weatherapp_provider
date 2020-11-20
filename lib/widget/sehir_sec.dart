@@ -16,28 +16,28 @@ class _SehirSecWidgetState extends State<SehirSecWidget> {
       ),
       body: Form(
           child: Row(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextFormField(
-                    controller: _textController,
-                    decoration: InputDecoration(
-                      labelText: 'Şehir',
-                      hintText: 'Şehir Seçin',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                controller: _textController,
+                decoration: InputDecoration(
+                  labelText: 'Şehir',
+                  hintText: 'Şehir Seçin',
+                  border: OutlineInputBorder(),
                 ),
               ),
-              IconButton(
-                  icon: Icon(Icons.search),
-                  onPressed: () {
-                    Navigator.pop(context, _textController.text);
-                  })
-            ],
-          )),
+            ),
+          ),
+          IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                Navigator.pop(context, _textController.text);
+              })
+        ],
+      )),
     );
   }
 }
